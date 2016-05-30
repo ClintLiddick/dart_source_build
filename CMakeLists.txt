@@ -9,7 +9,10 @@ set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake"
 # include(BuildType)
 # include(BuildLocation)
 
+include(download_dir)
 include(ExternalProject)
+
+include(External_boost)
 include(External_eigen)
 
 # # Set up a few default arguments for all projects, such as the install prefix,
@@ -83,9 +86,8 @@ add_executable(darttest
   src/darttest.cpp)
 
 add_dependencies(darttest
-  Eigen3)
-
-# target_include_directories(darttest
-#   ${Eigen_INCLUDE_DIRS
+  Eigen3
+  Boost)
 
 include_directories(${Eigen3_INCLUDE_DIRS})
+include_directories(${Boost_INCLUDE_DIRS})
