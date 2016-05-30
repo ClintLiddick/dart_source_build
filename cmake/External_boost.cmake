@@ -25,6 +25,7 @@ set(boost_with_args
   --with-filesystem
   --with-iostreams
   --with-program_options
+  --with-regex
   --with-system
   --with-thread
   --with-chrono
@@ -72,7 +73,10 @@ ExternalProject_Add(Boost
 ExternalProject_Get_Property(Boost install_dir)
 set(BOOST_ROOT "${install_dir}" CACHE INTERNAL "")
 set(Boost_INCLUDE_DIRS "${BOOST_ROOT}" CACHE INTERNAL "")
-set(Boost_LIBRARIES "${BOOST_ROOT}/lib" CACHE INTERNAL "")
+set(BOOST_LIBRARYDIR "${BOOST_ROOT}/lib" CACHE INTERNAL "")
+set(Boost_NO_SYSTEM_PATHS ON)
+
+find_package(Boost 1.55.0 REQUIRED COMPONENTS regex)
 
 # list(APPEND DartProject_THIRDPARTYLIBS_ARGS
 # # Add Boost properties so correct version of Boost is found.

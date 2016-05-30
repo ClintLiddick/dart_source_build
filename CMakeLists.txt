@@ -82,6 +82,7 @@ include(External_eigen)
 # #   "-DBUILD_DOCUMENTATION:BOOL=${BUILD_DOCUMENTATION}"
 # #   "-DENABLE_TESTING:BOOL=${ENABLE_TESTING}")
 
+
 add_executable(darttest
   src/darttest.cpp)
 
@@ -89,5 +90,10 @@ add_dependencies(darttest
   Eigen3
   Boost)
 
+# find_package(Boost 1.55.0 REQUIRED COMPONENTS regex)
+
 include_directories(${Eigen3_INCLUDE_DIRS})
 include_directories(${Boost_INCLUDE_DIRS})
+
+target_link_libraries(darttest
+  ${Boost_LIBRARIES})
