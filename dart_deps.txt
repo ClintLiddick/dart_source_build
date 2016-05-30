@@ -1,0 +1,73 @@
+libdart6
+  Depends: libassimp3 (>= 3.0~)
+  Depends: libboost-regex1.54.0
+  Depends: libboost-system1.54.0
+  Depends: libbulletcollision2.81
+  Depends: libc6 (>= 2.14)
+  Depends: libfcl0
+  Depends: libgcc1 (>= 1:4.1.1)
+  Depends: libgomp1 (>= 4.2.1)
+  Depends: liblinearmath2.81
+  Depends: libstdc++6 (>= 4.8)
+libassimp3
+  Depends: libc6 (>= 2.14)
+  Depends: libgcc1 (>= 1:4.1.1)
+  Depends: libstdc++6 (>= 4.6)
+  Depends: zlib1g (>= 1:1.1.4)
+libc6
+  Depends: libgcc1
+libgcc1
+  Depends: gcc-4.9-base (= 4.9-20140406-0ubuntu1)
+  Depends: libc6 (>= 2.14)
+  PreDepends: multiarch-support
+gcc-4.9-base
+multiarch-support
+  Depends: libc6 (>= 2.3.6-2)
+libstdc++6
+  Depends: gcc-4.8-base (= 4.8.2-19ubuntu1)
+  Depends: libc6 (>= 2.17)
+  Depends: libgcc1 (>= 1:4.1.1)
+  PreDepends: multiarch-support
+gcc-4.8-base
+zlib1g
+  Depends: libc6 (>= 2.14)
+  PreDepends: multiarch-support
+libboost-regex1.54.0
+  Depends: libc6 (>= 2.14)
+  Depends: libgcc1 (>= 1:4.1.1)
+  Depends: libicu52 (>= 52~m1-1~)
+  Depends: libstdc++6 (>= 4.6)
+  PreDepends: multiarch-support
+libicu52
+  Depends: libc6 (>= 2.14)
+  Depends: libgcc1 (>= 1:4.1.1)
+  Depends: libstdc++6 (>= 4.4.0)
+  PreDepends: multiarch-support
+libboost-system1.54.0
+  Depends: libc6 (>= 2.4)
+  Depends: libgcc1 (>= 1:4.1.1)
+  Depends: libstdc++6 (>= 4.1.1)
+  PreDepends: multiarch-support
+libbulletcollision2.81
+  Depends: libc6 (>= 2.14)
+  Depends: libgcc1 (>= 1:4.1.1)
+  Depends: liblinearmath2.81
+  Depends: libstdc++6 (>= 4.1.1)
+  PreDepends: multiarch-support
+liblinearmath2.81
+  Depends: libc6 (>= 2.14)
+  Depends: libgcc1 (>= 1:4.1.1)
+  Depends: libstdc++6 (>= 4.1.1)
+  PreDepends: multiarch-support
+libfcl0
+  Depends: libboost-system1.54.0
+  Depends: libc6 (>= 2.14)
+  Depends: libccd2
+  Depends: libgcc1 (>= 1:4.1.1)
+  Depends: libstdc++6 (>= 4.6)
+libccd2
+  Depends: libc6 (>= 2.3.4)
+libgomp1
+  Depends: gcc-4.8-base (= 4.8.2-19ubuntu1)
+  Depends: libc6 (>= 2.17)
+  PreDepends: multiarch-support
